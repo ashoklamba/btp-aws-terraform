@@ -6,6 +6,22 @@ This repository contains Terraform configurations for learning and managing SAP 
 
 This project uses Terraform to provision and manage resources on SAP BTP, specifically focusing on subaccount creation and configuration using the SAP BTP Terraform Provider.
 
+## Design Diagram
+
+```mermaid
+flowchart LR
+  TF[Terraform CLI] -->|uses| Provider[SAP BTP Provider]
+  Provider -->|authenticates| GA[Global Account: a0de043etrial-ga]
+  Provider -->|creates| Sub[BTP Subaccount: DEV Project ABC]
+  Sub --> Region[Region: us10]
+  Sub --> Beta[Beta Features: enabled]
+  Sub --> Labels[Labels: stage=DEV, costcenter=12345]
+```
+
+<p align="center">
+  <img src="images/BTP-multiprovider.png" alt="Security Scan" width="700">
+</p>
+
 ## Project Structure
 
 ```
