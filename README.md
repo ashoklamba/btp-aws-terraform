@@ -1,4 +1,4 @@
-# Learning Terraform
+# Terraform on BTP
 
 This repository contains Terraform configurations for learning and managing SAP BTP (Business Technology Platform) infrastructure as code.
 
